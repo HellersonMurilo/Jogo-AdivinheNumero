@@ -8,6 +8,7 @@ const body = document.getElementById('body')
 const score = document.getElementById('score')
 const reiniciarBttn = document.getElementById('reiniciarBttn')
 const valor = document.getElementById('valor')
+const marioImg = document.getElementById('mario')
 
 // tratando do Again
 reiniciarBttn.addEventListener('click', () => {
@@ -20,6 +21,7 @@ reiniciarBttn.addEventListener('click', () => {
     let indicador = document.getElementById('indicador')
     indicador.innerHTML = `<p>Start guessing...</p>`
     valor.innerHTML = '?'
+    marioImg.innerHTML = ` <img src="mario-removebg-preview.png" alt="">`
 
 })
 
@@ -40,6 +42,7 @@ function validarNumero() {
         highscore.innerHTML = `${score.textContent}`
         valor.innerHTML = `${numeroAleatorio}`
         validarHighscore()
+        marioImg.innerHTML = ` <img src="imagens/mario2.png" alt="" id="mario2">`
 
     } else if (campoNumero > numeroAleatorio) { // caso seja alto demais
         let indicador = document.getElementById('indicador')
